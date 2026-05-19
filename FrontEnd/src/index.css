@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
 
 :root {
-  --main-color: #00315e;
+  --main-color: #0d1b2a;
   --whit-color: #fff;
-  --second-color: #4fb7b3;
+  --second-color: #1d9e75;
   --hover-color: #6ec1e4;
   --text-color: #000;
 }
@@ -13,6 +13,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Cairo", sans-serif;
+  font-size: 14px;
 }
 
 body {

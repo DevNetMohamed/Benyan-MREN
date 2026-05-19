@@ -1,8 +1,10 @@
 .sidebar {
   background-color: var(--main-color);
-  color: white;
+  color: gray;
 }
-
+.w-25 {
+  width: 15% !important;
+}
 .icon,
 .linkTitle {
   font-size: 1rem;
@@ -11,9 +13,10 @@
   cursor: pointer;
   transition: background 1s;
   text-decoration: none;
-  color: white;
+  color: gray !important;
 }
 
 .navItem:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--second-color);
+  border-left: 2px solid var(--second-color);
 }

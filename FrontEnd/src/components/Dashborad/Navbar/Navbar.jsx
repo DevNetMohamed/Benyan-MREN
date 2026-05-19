@@ -1,4 +1,3 @@
-import Logo from "../../../assets/axis logo (1).png";
 import styles from "./Navbar.module.css";
 function Navbar({ adminName = "Super Admin" }) {
   return (
@@ -8,7 +7,7 @@ function Navbar({ adminName = "Super Admin" }) {
       <div
         className={`${styles.parentImg} d-flex justify-content-between align-items-center`}
       >
-        <img src={Logo} alt="" />
+        
       </div>
       <div className="adminSection d-flex justify-content-center align-items-center gap-3">
         <div className={styles.notificationSection}>
