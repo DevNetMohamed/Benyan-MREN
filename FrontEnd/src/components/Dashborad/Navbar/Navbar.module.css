@@ -1,7 +1,5 @@
 .nav {
   border-bottom: 2px solid #dee2e6;
-  padding: 0.5rem 1.5rem;
-  height: 70px;
 }
 
 .parentImg img {
@@ -19,8 +17,8 @@
 .countNoti {
   position: absolute;
   font-size: 0.7rem;
-  top: -8px;
-  right: -3px;
+  top: -3px;
+  right: -8px;
   padding: 0 5px;
 }
 

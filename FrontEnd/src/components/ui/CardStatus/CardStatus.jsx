@@ -1,23 +1,17 @@
 import styles from "./CardStatus.module.css";
+
 export default function CardStatus({ icon, counter, title }) {
   return (
-    <>
-      {/* Parent Card */}
-      <div className={`${styles.cardStatus} d-flex align-items-center`}>
-        {/* Icon Parent */}
-        <div
-          className={`${styles.icon} d-flex align-items-center justify-content-center w-100`}
-        >
-          <i className={icon}></i>
-        </div>
-        {/* Info */}
-        <div
-          className={`${styles.info} w-100 d-flex flex-column align-items-center gap-2`}
-        >
-          <span className={styles.counter}>{counter}</span>
-          <span className={styles.title}>{title}</span>
-        </div>
+    <div className={styles.cardStatus}>
+      {/* Icon */}
+      <div className={styles.Icon}>{icon}</div>
+
+      {/* Info */}
+      <div className={styles.Info}>
+        <span className={styles.counter}>{counter}</span>
+
+        <span className={styles.title}>{title}</span>
       </div>
-    </>
+    </div>
   );
 }

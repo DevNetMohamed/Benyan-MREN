@@ -5,7 +5,6 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import NotFound from "./components/shared/NotFound/NotFound";
-import StatusPage from "./pages/statusPage/StatusPage";
 import UsersPage from "./pages/UsersPage/UsersPage";
 import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
 import Developers from "./pages/DevelopersPage/Developers";
@@ -21,6 +20,7 @@ import MasterLayout from "./components/layout/MasterLayout/MasterLayout";
 import LeadesBot from "./pages/LeadesBot/LeadesBot";
 import ReportesPage from "./pages/ReportesPage/ReportesPage";
 import SettingsPages from "./pages/SettingsPages/SettingsPages";
+import AdminDashbord from "./pages/AdminDashbord/AdminDashbord";
 
 function App() {
   const routers = createBrowserRouter([
@@ -51,7 +51,7 @@ function App() {
         { path: "leades-bot", element: <LeadesBot /> },
         { path: "Settings", element: <SettingsPages /> },
         { path: "live-chat", element: <LiveChat /> },
-        { path: "status", element: <StatusPage /> },
+        { path: "status", element: <AdminDashbord /> },
       ],
     },
   ]);

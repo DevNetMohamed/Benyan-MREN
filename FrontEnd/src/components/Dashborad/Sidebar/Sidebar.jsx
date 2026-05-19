@@ -5,7 +5,7 @@ import { HiOutlineUsers } from "react-icons/hi";
 import { GoProjectSymlink } from "react-icons/go";
 import { PiBuildingsBold, PiWalletDuotone } from "react-icons/pi";
 import { FaChartBar } from "react-icons/fa";
-import { BsRobot } from "react-icons/bs";
+import { BsBuildingsFill, BsRobot } from "react-icons/bs";
 import { SiLivechat } from "react-icons/si";
 import { SlSettings } from "react-icons/sl";
 
@@ -35,8 +35,11 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside className={`min-vh-100 py-3 w-25 ${styles.sidebar}`}>
-      <div className="px-4 fs-6 mb-3">BUNYAN REAL ESTATE</div>
+    <aside className={` min-vh-100 py-4 px-3 ${styles.sidebar} `}>
+      <div className={`px-4 fs-6 mb-3 ${styles.logo} `}>
+        <BsBuildingsFill />
+        BUNYAN REAL ESTATE
+      </div>
 
       <nav>
         {links.map((item, index) => (

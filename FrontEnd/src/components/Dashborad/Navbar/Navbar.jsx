@@ -1,17 +1,16 @@
+import { IoNotificationsOutline } from "react-icons/io5";
 import styles from "./Navbar.module.css";
+
 function Navbar({ adminName = "Super Admin" }) {
   return (
     <nav
-      className={`${styles.nav} d-flex justify-content-between align-items-center shadow-sm`}
+      className={`${styles.nav} d-flex justify-content-between align-items-center shadow-sm bg-body-secondary p-2`}
     >
-      <div
-        className={`${styles.parentImg} d-flex justify-content-between align-items-center`}
-      >
-        
-      </div>
-      <div className="adminSection d-flex justify-content-center align-items-center gap-3">
+      <div className={`fs-3 fw-bold `}>DASHBOARD</div>
+      <div className="d-flex justify-content-center align-items-center gap-3">
         <div className={styles.notificationSection}>
-          <i className="fa-solid fa-bell"></i>
+          <IoNotificationsOutline />
+
           <span
             className={`${styles.countNoti} bg-info text-white rounded-pill`}
           >

@@ -1,25 +1,42 @@
 .cardStatus {
-  background-color: var(--hover-color);
-  height: 160px;
-  border-radius: 12px;
-  box-shadow: 7px 7px 11px -4px;
-  max-width: 280px;
+  background-color: #e6f1fb;
+  border-radius: 20px;
+  padding: 22px;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
 
-.Icon {
-  color: var(--main-color);
-  font-size: 2rem;
+.cardStatus:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.Icon svg {
+  color: var(--second-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem !important;
 }
 
 .Info {
-  color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.counter,
-.title {
-  font-size: 2rem;
-  font-weight: bold;
+
+.counter {
+  font-size: 2.2rem;
+  font-weight: 700;
 }
 
 .title {
-  font-size: 1.1rem;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6b7280;
 }
