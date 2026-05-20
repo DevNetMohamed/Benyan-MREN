@@ -1,0 +1,23 @@
+.HeroAuth {
+  height: 100vh;
+}
+
+.HeroAuth img {
+  object-fit: cover;
+}
+
+.ContentAuth {
+  bottom: 120px;
+  left: 80px;
+  max-width: 400px;
+  z-index: 2;
+}
+
+.Description {
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.Footer {
+  font-size: 12px;
+}
