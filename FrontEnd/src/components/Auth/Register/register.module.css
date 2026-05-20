@@ -1,0 +1,7 @@
+.checkBoxSpan span {
+  color: var(--second-color);
+  cursor: pointer;
+}
+.checkBoxSpan span:hover {
+  border-bottom: 1px solid var(--second-color);
+}

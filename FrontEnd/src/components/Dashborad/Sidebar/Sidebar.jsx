@@ -11,27 +11,27 @@ import { SlSettings } from "react-icons/sl";
 
 export default function Sidebar() {
   const links = [
-    { icon: <MdDashboardCustomize />, title: "Dashboard", path: "/" },
+    { icon: <MdDashboardCustomize />, title: "Dashboard", path: "/dashboard" },
     {
       icon: <HiOutlineUsers />,
       title: "User management",
-      path: "/user-management/users",
+      path: "user-management/users",
     },
     {
       icon: <GoProjectSymlink />,
       title: "Project management",
-      path: "/project-management/project",
+      path: "project-management/project",
     },
     {
       icon: <PiBuildingsBold />,
       title: "Developers management",
-      path: "/developer-management/developer",
+      path: "developer-management/developer",
     },
-    { icon: <PiWalletDuotone />, title: "WEBSITE CMS", path: "/website/cms" },
-    { icon: <FaChartBar />, title: "REPORTES", path: "/reportes" },
-    { icon: <BsRobot />, title: "LEADES BOT", path: "/leades-bot" },
-    { icon: <SiLivechat />, title: "Live Chat", path: "/live-chat" },
-    { icon: <SlSettings />, title: "SETTINGES", path: "/Settings" },
+    { icon: <PiWalletDuotone />, title: "WEBSITE CMS", path: "website/cms" },
+    { icon: <FaChartBar />, title: "REPORTES", path: "reportes" },
+    { icon: <BsRobot />, title: "LEADES BOT", path: "leades-bot" },
+    { icon: <SiLivechat />, title: "Live Chat", path: "live-chat" },
+    { icon: <SlSettings />, title: "SETTINGES", path: "Settings" },
   ];
 
   return (

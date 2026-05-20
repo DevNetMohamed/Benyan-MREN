@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import InputAuth from "../../ui/inputAuth/InputAuth";
 
 export default function Login() {
@@ -10,7 +11,7 @@ export default function Login() {
         </p>
       </div>
 
-      <form onSubmit={(e) => e.preventDefault()}>
+      <form>
         <div className="mb-3">
           <InputAuth
             label="Email Address"
@@ -39,12 +40,12 @@ export default function Login() {
             </label>
           </div>
 
-          <a
-            href="#"
+          <Link
+            to="/reset-password"
             className="text-success text-decoration-none small fw-medium"
           >
             Forgot password?
-          </a>
+          </Link>
         </div>
 
         <button
@@ -53,6 +54,15 @@ export default function Login() {
         >
           Sign In
         </button>
+        <div className="d-flex gap-2 py-3">
+          Don't have an account?
+          <Link
+            to="/register"
+            className="text-success text-decoration-none small fw-medium"
+          >
+            Sign Up
+          </Link>
+        </div>
       </form>
     </div>
   );
