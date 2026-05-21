@@ -1,7 +1,9 @@
 import { Link, useMatch } from "react-router-dom";
 
 export default function HeadreUser({ title, discription, but_name }) {
-  const isAddPage = useMatch("/dashboard/user-management/users/add");
+  const isAddPage = useMatch(
+    "/dashboard/user-management/users/add",
+  );
 
   return (
     <>

@@ -22,6 +22,7 @@ import SettingsPages from "./pages/SettingsPages/SettingsPages";
 import AdminDashbord from "./pages/AdminDashbord/AdminDashbord";
 import NewPassword from "./components/Auth/NewPassword/NewPassword";
 import AddNewUser from "./components/Users/AddNewUser/AddNewUser";
+import AddNewProject from "./components/ProjectManagement/AddNewProject/AddNewProject";
 
 function App() {
   const routers = createBrowserRouter([
@@ -49,12 +50,13 @@ function App() {
         {
           path: "user-management/users",
           element: <UsersPage />,
-          children: [
-          
-            { path: "add", element: <AddNewUser /> },
-          ],
+          children: [{ path: "add", element: <AddNewUser /> }],
         },
-        { path: "project-management/project", element: <ProjectsPage /> },
+        {
+          path: "project-management/project",
+          element: <ProjectsPage />,
+          children: [{ path: "add", element: <AddNewProject /> }],
+        },
         { path: "developer-management/developer", element: <Developers /> },
         { path: "website/cms", element: <CMS /> },
         { path: "reportes", element: <ReportesPage /> },

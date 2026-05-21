@@ -1,27 +1,3 @@
-// import HeadreUser from "../../components/Users/HeadreUser/HeadreUser";
-// import SearchFilter from "../../components/Users/SearchFilter/SearchFilter";
-// import Tables from "../../components/Users/Tables/Tables";
-
-// export default function UsersPage() {
-//   return (
-//     <>
-//       <div className="m-5">
-//         <HeadreUser
-//           title={"Users Table"}
-//           discription={"Manage all users and their information"}
-//           but_name={"+ Add New User"}
-//         />
-
-//         <div>
-//           <SearchFilter />
-//         </div>
-//         <div className="py-3">
-//           <Tables />
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
 import { Outlet, useMatch } from "react-router-dom";
 import HeadreUser from "../../components/Users/HeadreUser/HeadreUser";
 import SearchFilter from "../../components/Users/SearchFilter/SearchFilter";
