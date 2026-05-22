@@ -1,38 +1,24 @@
-import React from "react";
-
-export default function DropDownList({ feildone, feildtow, feildThree }) {
+export default function DropDownList({ placeholder, options = [] }) {
   return (
-    <>
-      <div className="dropdown">
-        <a
-          className="btn btn-secondary dropdown-toggle"
-          href="#"
-          role="button"
-          id="dropdownMenuLink"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          {feildone}
-        </a>
+    <div className="dropdown">
+      <button
+        className="btn bg-white border dropdown-toggle text-muted d-flex justify-content-between align-items-center shadow-none w-100"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        {placeholder}
+      </button>
 
-        <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <li>
+      <ul className="dropdown-menu">
+        {options.map((option, index) => (
+          <li key={index}>
             <a className="dropdown-item" href="#">
-              {feildone}
+              {option}
             </a>
           </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              {feildtow}
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              {feildThree}
-            </a>
-          </li>
-        </ul>
-      </div>
-    </>
+        ))}
+      </ul>
+    </div>
   );
 }

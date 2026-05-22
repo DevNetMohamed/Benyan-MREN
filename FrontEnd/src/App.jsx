@@ -23,6 +23,7 @@ import AdminDashbord from "./pages/AdminDashbord/AdminDashbord";
 import NewPassword from "./components/Auth/NewPassword/NewPassword";
 import AddNewUser from "./components/Users/AddNewUser/AddNewUser";
 import AddNewProject from "./components/ProjectManagement/AddNewProject/AddNewProject";
+import AddNewDeveloper from "./components/DeveloperMangament/AddNewDeveloper/AddNewDeveloper";
 
 function App() {
   const routers = createBrowserRouter([
@@ -57,7 +58,11 @@ function App() {
           element: <ProjectsPage />,
           children: [{ path: "add", element: <AddNewProject /> }],
         },
-        { path: "developer-management/developer", element: <Developers /> },
+        {
+          path: "developer-management/developer",
+          element: <Developers />,
+          children: [{ path: "add", element: <AddNewDeveloper /> }],
+        },
         { path: "website/cms", element: <CMS /> },
         { path: "reportes", element: <ReportesPage /> },
         { path: "leades-bot", element: <LeadesBot /> },

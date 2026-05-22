@@ -25,7 +25,15 @@ export default function UsersPage() {
           <>
             <SearchFilter />
             <div className="py-3">
-              <Tables />
+              <Tables
+                col_1={"#"}
+                col_2={"First Name"}
+                col_3={"Last Name"}
+                col_4={"UserName"}
+                col_5={"Email"}
+                col_6={"Role"}
+                col_7={"Actions"}
+              />
             </div>
           </>
         )}

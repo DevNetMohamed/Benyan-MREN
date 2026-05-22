@@ -1,0 +1,149 @@
+/* ── Card wrapper ── */
+.cart-project {
+  border-radius: 16px !important;
+  overflow: hidden;
+  border: 1px solid #e5e7eb !important;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07) !important;
+  width: 100%;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cart-project:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-2px);
+}
+
+/* ── Image ── */
+.cart-project .cart-project__image-wrapper {
+  position: relative;
+}
+
+.cart-project .cart-project__image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Status Badge ── */
+.cart-project .cart-project__status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.cart-project .status--active {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.cart-project .status--pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.cart-project .status--completed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+/* ── Body ── */
+.cart-project .cart-project__body {
+  padding: 14px 16px 16px;
+}
+
+/* ── Info ── */
+.cart-project .cart-project__title {
+  margin: 0 0 2px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.cart-project .cart-project__developer {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ── Units Badge ── */
+.cart-project .cart-project__units {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.cart-project .cart-project__units-icon {
+  font-size: 13px;
+}
+
+/* ── Divider ── */
+.cart-project .cart-project__divider {
+  margin: 12px 0;
+  border: none;
+  border-top: 1px solid #e5e7eb !important;
+  opacity: 1 !important;
+}
+
+/* ── Footer ── */
+.cart-project .cart-project__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.cart-project .cart-project__price {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cart-project .cart-project__price-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #9ca3af;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.cart-project .cart-project__price-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  display: block;
+}
+
+/* ── Edit Button ── */
+.cart-project .cart-project__edit-btn {
+  background: #ffffff !important;
+  border: 1.5px solid #065f46 !important;
+  color: #065f46 !important;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.cart-project .cart-project__edit-btn:hover {
+  background: #065f46 !important;
+  color: #ffffff !important;
+}
