@@ -23,7 +23,7 @@ services:
       - ./BackEnd:/app
       - /app/node_modules
     env_file:
-      - ./BackEnd/config/.env
+      - ./BackEnd/config/config.env
     depends_on:
       - mongodb
     networks:
