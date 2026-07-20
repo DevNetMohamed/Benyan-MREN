@@ -4,18 +4,11 @@ export default function Form({ title, lablename }) {
       <form className="w-50">
         {lablename.map((item, index) => (
           <div className="mb-3" key={index}>
-            <label
-              htmlFor={`input-${index}`}
-              className="form-label"
-            >
+            <label htmlFor={`input-${index}`} className="form-label">
               {item}
             </label>
 
-            <input
-              type="text"
-              className="form-control"
-              id={`input-${index}`}
-            />
+            <input type="text" className="form-control" id={`input-${index}`} />
           </div>
         ))}
 
@@ -26,10 +19,7 @@ export default function Form({ title, lablename }) {
             id="exampleCheck1"
           />
 
-          <label
-            className="form-check-label"
-            htmlFor="exampleCheck1"
-          >
+          <label className="form-check-label" htmlFor="exampleCheck1">
             Check me out
           </label>
         </div>

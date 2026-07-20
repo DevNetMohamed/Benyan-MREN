@@ -1,31 +1,50 @@
 import { CiLock } from "react-icons/ci";
 import InputAuth from "../../ui/inputAuth/InputAuth";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { addUserSchema } from "../Validation/addUserSchema";
 
 export default function AddNewUser() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(addUserSchema),
+    defaultValues: {
+      role: "agent",
+      status: true,
+    },
+  });
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
   const userDetails = [
     {
       id: "firstName",
       label: "First Name",
       type: "text",
-      placeholder: "e.g. Name",
+      placeholder: "e.g. John",
     },
     {
       id: "lastName",
       label: "Last Name",
       type: "text",
-      placeholder: "e.g. Name",
+      placeholder: "e.g. Doe",
     },
     {
       id: "username",
       label: "Username",
       type: "text",
-      placeholder: "UserName",
+      placeholder: "john_doe",
     },
     {
       id: "email",
       label: "Email Address",
       type: "email",
-      placeholder: "Enter your Email",
+      placeholder: "example@email.com",
     },
   ];
 
@@ -47,36 +66,53 @@ export default function AddNewUser() {
   return (
     <div className="container my-4">
       <div className="card shadow-sm border rounded-3 p-4">
-        <form className="row g-4">
-          {/* Loop through user details (Rows 1 & 2) */}
+        <form className="row g-4" onSubmit={handleSubmit(onSubmit)}>
+          {/* User Details */}
           {userDetails.map((field) => (
             <div className="col-md-6" key={field.id}>
               <InputAuth
+                id={field.id}
                 label={field.label}
                 type={field.type}
                 placeholder={field.placeholder}
+                register={register}
+                error={errors[field.id]?.message}
               />
             </div>
           ))}
 
-          <div className="col-md-6 d-flex flex-column">
-            <label className="form-label mb-2">Assign Role</label>
-            <select className="form-select form-select-lg fs-6 shadow-none">
+          {/* Role */}
+          <div className="col-md-6">
+            <label className="form-label">Assign Role</label>
+
+            <select
+              className={`form-select form-select-lg ${
+                errors.role ? "is-invalid" : ""
+              }`}
+              {...register("role")}
+            >
               <option value="agent">Agent</option>
               <option value="admin">Admin</option>
               <option value="manager">Manager</option>
             </select>
+
+            {errors.role && (
+              <div className="invalid-feedback">
+                {errors.role.message}
+              </div>
+            )}
           </div>
+
+          {/* Status */}
           <div className="col-md-6 d-flex align-items-end">
             <div className="d-flex align-items-center justify-content-between w-100 p-2 px-3 bg-light border rounded">
-              <span className="text-muted">Status: Active</span>
+              <span>Status: Active</span>
+
               <div className="form-check form-switch m-0 p-0">
                 <input
-                  className="form-check-input ms-0 mt-0"
                   type="checkbox"
-                  role="switch"
-                  id="statusSwitch"
-                  defaultChecked
+                  className="form-check-input ms-0 mt-0"
+                  {...register("status")}
                   style={{
                     width: "2.5rem",
                     height: "1.25rem",
@@ -87,31 +123,35 @@ export default function AddNewUser() {
             </div>
           </div>
 
-          {/* Loop through password details (Row 4) */}
+          {/* Passwords */}
           {passwordDetails.map((field) => (
             <div className="col-md-6" key={field.id}>
               <InputAuth
+                id={field.id}
                 label={field.label}
                 type={field.type}
                 placeholder={field.placeholder}
+                register={register}
+                error={errors[field.id]?.message}
               />
             </div>
           ))}
 
           <div className="col-12">
-            <hr className="text-muted my-2" />
+            <hr />
           </div>
 
-          <div className="col-12 d-flex justify-content-end gap-3 mt-2">
+          <div className="col-12 d-flex justify-content-end gap-3">
             <button
               type="button"
-              className="btn btn-outline-dark px-4 fw-medium bg-white"
+              className="btn btn-outline-dark"
             >
               Cancel
             </button>
+
             <button
               type="submit"
-              className="btn px-4 fw-medium text-white"
+              className="btn text-white"
               style={{ backgroundColor: "#006b44" }}
             >
               Save User
@@ -120,7 +160,6 @@ export default function AddNewUser() {
         </form>
       </div>
 
-      {/* Footer Text */}
       <div
         className="text-center mt-4 text-muted"
         style={{ fontSize: "0.85rem" }}
@@ -129,7 +168,9 @@ export default function AddNewUser() {
           <CiLock />
           Secure Data Encryption Enabled
         </span>
+
         <span className="mx-2">•</span>
+
         <span>Last update: Aug 12, 2026</span>
       </div>
     </div>

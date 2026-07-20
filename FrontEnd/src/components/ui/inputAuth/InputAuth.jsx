@@ -1,18 +1,27 @@
-
-export default function InputAuth({label, type, placeholder}) {
+export default function InputAuth({
+  id,
+  label,
+  type,
+  placeholder,
+  register,
+  error,
+}) {
   return (
     <>
-      <div>
-        <label for="exampleFormControlInput1" class="form-label">
-          {label}
-        </label>
-        <input
-          type={type}
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder={placeholder}
-        />
-      </div>
+      <label className="form-label">{label}</label>
+
+      <input
+        {...register(id)}
+        type={type}
+        placeholder={placeholder}
+        className={`form-control form-control-lg ${
+          error ? "is-invalid" : ""
+        }`}
+      />
+
+      {error && (
+        <div className="invalid-feedback">{error}</div>
+      )}
     </>
   );
 }
