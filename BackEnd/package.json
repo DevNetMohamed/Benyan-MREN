@@ -7,7 +7,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "node api.js && nodemon app.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
