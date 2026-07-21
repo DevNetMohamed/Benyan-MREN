@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: benyan-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: benyan-frontend
+
+  template:
+    metadata:
+      labels:
+        app: benyan-frontend
+
+    spec:
+      containers:
+        - name: benyan-frontend
+          image: mohamedadel204/benyan-frontend:1.0
+
+          ports:
+            - containerPort: 5173
+              name: http
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "64Mi"
+            limits:
+              cpu: "100m"
+              memory: "256Mi"

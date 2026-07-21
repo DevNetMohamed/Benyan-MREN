@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: benyan-frontend-service
+spec:
+  type: ClusterIP
+  selector:
+    app: benyan-frontend
+  ports:
+    - port: 5173
+      targetPort: 5173
