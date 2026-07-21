@@ -13,6 +13,7 @@ services:
       - benyan-network
 
   backend:
+    image: mohamedadel204/benyan-backend:1.0
     build:
       context: ./BackEnd
       dockerfile: Dockerfile
@@ -30,6 +31,7 @@ services:
       - benyan-network
 
   frontend:
+    image: mohamedadel204/benyan-frontend:1.0
     build:
       context: ./FrontEnd
       dockerfile: Dockerfile
