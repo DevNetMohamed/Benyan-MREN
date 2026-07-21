@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
         - name: benyan-frontend
-          image: mohamedadel204/benyan-frontend:1.0
+          image: mohamedadel204/benyan-frontend:2.1
 
           ports:
-            - containerPort: 5173
+            - containerPort: 80
               name: http
           resources:
             requests:
