@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: benyan-frontend-service
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: benyan-frontend
   ports:
-    - port: 5173
-      targetPort: 5173
+    - port: 80
+      targetPort: 80
